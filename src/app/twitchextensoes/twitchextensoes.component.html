@@ -1,0 +1,34 @@
+<h2>Aplicativos</h2>
+<ul class="Extensions">
+  <li *ngFor="let twtExt of conjuntoextension" 
+  [class.selected]='twtExt === selectedExtension'
+  (click)="onSelect(twtExt)">
+    
+    <span class="badge">Nome: {{twtExt.id}}</span>{{twtExt.name}}
+
+  </li>
+</ul>
+
+<div *ngIf='selectedExtension'>
+<hr>
+<h2>{{selectedExtension.name | uppercase}} Details</h2>
+<p>
+  twitchextensoes works! {{selectedExtension}}
+</p>
+<div>
+  <span>id:</span>{{selectedExtension.id}}
+</div>
+<div>
+  <span>name:</span>{{selectedExtension.name}}
+</div>
+<div>
+  <span>type:</span>{{selectedExtension.type}}
+</div>
+<hr>
+
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedExtension.name" placeholder="name">
+    </label>
+  </div>
+</div>
