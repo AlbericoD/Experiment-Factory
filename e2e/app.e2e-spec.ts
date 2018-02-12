@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('factory-experience App', () => {
+describe('angular-tour-of-heroes App', () => {
   let page: AppPage;
 
   beforeEach(() => {
